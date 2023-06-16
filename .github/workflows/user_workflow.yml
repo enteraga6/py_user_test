@@ -12,7 +12,7 @@ jobs:
           actions: read # For getting workflow run info.
         uses: enteraga6/slsa-github-generator/.github/workflows/builder_bazel_slsa3.yml@bazel-builder
         with:
-            targets: "//src:fib //src:hello //src:main" #USER INPUTTED MATERIAL
+            targets: "//src/fib:fib //src/hello:hello //src:main" #USER INPUTTED MATERIAL
     download:
             needs: [build]
             runs-on: ubuntu-latest
