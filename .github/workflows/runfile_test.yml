@@ -1,4 +1,4 @@
-name: User Workflow
+name: Runfile Workflow Test
 
 on:
     workflow_dispatch:
