@@ -1,12 +1,10 @@
-load("@io_bazel_rules_python//python:defs.bzl", "py_library")
-
-py_library(
-    name = "hello_world",
+py_binary(
+    name = "hello",
     srcs = ["hello.py"],
 )
 
-py_library(
-    name = "fibonacci",
+py_binary(
+    name = "fib",
     srcs = ["fib.py"],
 )
 
@@ -14,7 +12,7 @@ py_binary(
     name = "main",
     srcs = ["main.py"],
     deps = [
-        ":hello_world",
-        ":fibonacci",
+        ":hello",
+        ":fib",
     ],
 )
