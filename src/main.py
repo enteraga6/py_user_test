@@ -1,5 +1,5 @@
-from hello import hello_world
-from fib import fibonacci
+from src.hello.hello import hello_world
+from src.fib.fib import fibonacci
 
 def main():
     hello_world()
