@@ -10,9 +10,10 @@ jobs:
           id-token: write # For signing
           contents: read # For repo checkout.
           actions: read # For getting workflow run info.
-        uses: enteraga6/slsa-github-generator/.github/workflows/builder_bazel_slsa3.yml@bazel-builder-cquery
+        uses: enteraga6/slsa-github-generator/.github/workflows/builder_bazel_slsa3.yml@runfile-main
         with:
             targets: "//src/fib:fib //src/hello:hello //src:main" #USER INPUTTED MATERIAL
+            needs-runfiles: true
     download:
             needs: [build]
             runs-on: ubuntu-latest
